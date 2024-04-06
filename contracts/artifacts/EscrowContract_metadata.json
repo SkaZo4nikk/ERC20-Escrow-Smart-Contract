@@ -74,7 +74,7 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "seller",
+						"name": "implementer",
 						"type": "address"
 					},
 					{
@@ -106,12 +106,12 @@
 				"outputs": [
 					{
 						"internalType": "address",
-						"name": "buyer",
+						"name": "client",
 						"type": "address"
 					},
 					{
 						"internalType": "address",
-						"name": "seller",
+						"name": "implementer",
 						"type": "address"
 					},
 					{
@@ -168,7 +168,7 @@
 					},
 					{
 						"internalType": "uint256",
-						"name": "sellerPercentage",
+						"name": "implementerPercentage",
 						"type": "uint256"
 					}
 				],
@@ -311,11 +311,11 @@
 			]
 		},
 		"contracts/EscrowAlpha.sol": {
-			"keccak256": "0xffd125fa7300c03690c4c050ec20c69eb74f468d7e37b7f57676cdc20e36dd24",
+			"keccak256": "0x89fc13a9999d5b2ea20b3df81ba258547ab9a41006224d6ea0f8b3cff53524b0",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://bbdae1ce6f35e59658a1f6c7e9906b4d48f1e140614f04c9342dc84d04b2790f",
-				"dweb:/ipfs/QmS7gHydCCTNmzF7oL2DA7pqKLVzzJdLnBCUgFLTm4vXNk"
+				"bzz-raw://b7c2ddb8154da91be2f9aa8029fb8f5cea277ba761e95aef5e4435ca6583d6e7",
+				"dweb:/ipfs/QmTzCXaGS5PA2sQBaZDa87QJwzMYp3TwykZ3duuPmzVM6T"
 			]
 		}
 	},
