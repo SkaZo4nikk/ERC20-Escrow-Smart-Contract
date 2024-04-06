@@ -6,13 +6,7 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [
-					{
-						"internalType": "contract IERC20",
-						"name": "_token",
-						"type": "address"
-					}
-				],
+				"inputs": [],
 				"stateMutability": "nonpayable",
 				"type": "constructor"
 			},
@@ -73,8 +67,18 @@
 			{
 				"inputs": [
 					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
 						"internalType": "address",
 						"name": "implementer",
+						"type": "address"
+					},
+					{
+						"internalType": "contract IERC20",
+						"name": "token",
 						"type": "address"
 					},
 					{
@@ -112,6 +116,11 @@
 					{
 						"internalType": "address",
 						"name": "implementer",
+						"type": "address"
+					},
+					{
+						"internalType": "contract IERC20",
+						"name": "token",
 						"type": "address"
 					},
 					{
@@ -179,19 +188,6 @@
 			},
 			{
 				"inputs": [],
-				"name": "nextDealId",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
 				"name": "owner",
 				"outputs": [
 					{
@@ -208,19 +204,6 @@
 				"name": "renounceOwnership",
 				"outputs": [],
 				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "token",
-				"outputs": [
-					{
-						"internalType": "contract IERC20",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -311,11 +294,11 @@
 			]
 		},
 		"contracts/EscrowAlpha.sol": {
-			"keccak256": "0x89fc13a9999d5b2ea20b3df81ba258547ab9a41006224d6ea0f8b3cff53524b0",
+			"keccak256": "0x2663798a31d4308340307c2428cfc550a77595589fd1d35184b9f7a238ecdfe5",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://b7c2ddb8154da91be2f9aa8029fb8f5cea277ba761e95aef5e4435ca6583d6e7",
-				"dweb:/ipfs/QmTzCXaGS5PA2sQBaZDa87QJwzMYp3TwykZ3duuPmzVM6T"
+				"bzz-raw://da8c2f5f612fb5322596e01535b43745af2f3ec5fce331d31ab4d9132571089d",
+				"dweb:/ipfs/Qmb61d9i2eXV9TKDfoD8pBmhmzJ1EfUXXsXFhwAK3tLbf7"
 			]
 		}
 	},
