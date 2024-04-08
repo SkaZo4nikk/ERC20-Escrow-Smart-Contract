@@ -7,6 +7,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 contract EscrowContract is Ownable {
 
     struct Deal {
+        address garant;
         address client; //client
         address implementer; //implementer
         IERC20 token;
@@ -19,15 +20,15 @@ contract EscrowContract is Ownable {
 
     constructor() Ownable(msg.sender) {}
 
-    function createDeal(uint256 id, address implementer, IERC20 token, uint256 amount) external returns (uint256) {
+    function createDeal(uint256 id, address client, address implementer, IERC20 token, uint256 amount) external returns (uint256) {
         uint256 dealId = id;
-        deals[dealId] = Deal(msg.sender, implementer, token, amount, false, false);
+        deals[dealId] = Deal(msg.sender, client, implementer, token, amount, false, false);
         return dealId;
     }
 
     function depositTokens(uint256 dealId) external {
         Deal storage deal = deals[dealId];
-        require(msg.sender == deal.client, "Only the client can deposit tokens for the deal.");
+        require(msg.sender == deal.garant, "Only the Escrow can deposit tokens for the deal.");
         require(deal.token.transferFrom(msg.sender, address(this), deal.amount), "Token transfer failed");
         deal.fundsDeposited = true;
     }
