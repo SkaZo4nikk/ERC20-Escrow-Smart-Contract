@@ -3,20 +3,16 @@
 pragma solidity ^0.8.25;
 
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract PeerToPeerTransaction is ERC20, Ownable {
-
-    address public admin;
+contract PeerToPeerTransaction is ERC20 {
 
     uint256 public tokenPrice = 0.0001 ether;
 
-    constructor(address initialOwner)
+    constructor()
         ERC20("PeerToPeerTransaction", "PTPT")
-        Ownable(initialOwner)
+        //Ownable()
     {
-        _mint(msg.sender, 10000 * 10 ** decimals());
-        admin = initialOwner;
+        _mint(address(this), 10000 * 10 ** decimals());
     }
 
  //   function mint(address to, uint256 amount) public onlyOwner {
